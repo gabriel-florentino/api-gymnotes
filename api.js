@@ -18,7 +18,8 @@ import { swaggerDocs } from "./config/swagger.js";
 
 
 const app = express();
-
+// Confia no proxy (necessário em Render, Heroku, etc.)
+app.set('trust proxy', 1); // 1 = confiar apenas no primeiro proxy
 dotenv.config();
 connectDB(); //Faz a conecção com DB
 
