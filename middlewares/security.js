@@ -71,6 +71,11 @@ export const securityMiddlewares = (app) => {
     methods: ["POST", "GET", "PUT", "DELETE", "PATCH"]
   }));
 
+  app.use("/go-workout", cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["POST", "GET", "PUT", "DELETE", "PATCH"]
+  }));
+
   // Log simples de requisições
   const stream = {
     write: (message) => logger.info(message.trim()),
