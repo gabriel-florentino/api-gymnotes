@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "d01c9d12-0c5c-468a-8681-22b25d29aeaf",
+		"name": "gym-notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45536519"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Gabriel Florentino\",\r\n  \"email\": \"bielzinhogamytfyfeplay@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bielzinhogamytfyfeplay@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos exercises",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTA5OGQ3ZDhhMTYyNmJiNGIwZTMwMSIsImVtYWlsIjoiYmllbHppbmhvZ2FteXRmeWZlcGxheUBnbWFpbC5jb20iLCJpYXQiOjE3NTUzNTUzNjgsImV4cCI6MTc1NTM1ODk2OH0.B-C1O8aEt3f9XteS9Ud_QNmbQLlOQ8IrE1qDwwsbHaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/exercises",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar exercises por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTA5OGQ3ZDhhMTYyNmJiNGIwZTMwMSIsImVtYWlsIjoiYmllbHppbmhvZ2FteXRmeWZlcGxheUBnbWFpbC5jb20iLCJpYXQiOjE3NTUzNTUzNjgsImV4cCI6MTc1NTM1ODk2OH0.B-C1O8aEt3f9XteS9Ud_QNmbQLlOQ8IrE1qDwwsbHaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Criar exercises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1Mjc4MDI3LCJleHAiOjE3NTUyODE2Mjd9.pyjmbT8wOX79BIrA4Dizm-mR5McTyBaTUwWg5-GjYwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"rosquinhata\",\r\n  \"level\": \"easy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/exercises",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar totalmente exercises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTA5OGQ3ZDhhMTYyNmJiNGIwZTMwMSIsImVtYWlsIjoiYmllbHppbmhvZ2FteXRmeWZlcGxheUBnbWFpbC5jb20iLCJpYXQiOjE3NTUzNTUzNjgsImV4cCI6MTc1NTM1ODk2OH0.B-C1O8aEt3f9XteS9Ud_QNmbQLlOQ8IrE1qDwwsbHaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"roscona direta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/exercises/689f6d9e3e4c5ec0b6ef6884",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"exercises",
+						"689f6d9e3e4c5ec0b6ef6884"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar parcialmente exercises",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNiZjI5MTU2OTU5ZWE0YzFkNjA2MSIsImVtYWlsIjoiZ2FicmllbC5nLmMuZmxvcmVudGlub0BnbWFpbC5jb20iLCJpYXQiOjE3NTUyNzkyMzUsImV4cCI6MTc1NTI4MjgzNX0.sBwj0JoBZf0W4o8GQa8Le2ic0hdsycBZlwOOXfU5fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bolona direta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/exercises/689f6d9e3e4c5ec0b6ef6884",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"exercises",
+						"689f6d9e3e4c5ec0b6ef6884"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete exercise",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWNiZjI5MTU2OTU5ZWE0YzFkNjA2MSIsImVtYWlsIjoiZ2FicmllbC5nLmMuZmxvcmVudGlub0BnbWFpbC5jb20iLCJpYXQiOjE3NTUyNzkyMzUsImV4cCI6MTc1NTI4MjgzNX0.sBwj0JoBZf0W4o8GQa8Le2ic0hdsycBZlwOOXfU5fC4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/exercises/68977eab2197b63060942afb",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"exercises",
+						"68977eab2197b63060942afb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos workouts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/workout",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar woukout por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/workout/689b7096419c296f39a303af",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout",
+						"689b7096419c296f39a303af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"core\": \"abs\",\r\n    \"startTime\": \"2025-08-12T09:00:00Z\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/workout",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar totalmente workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"core\": \"legs\",\r\n    \"startTime\": \"2025-08-12T09:00:00Z\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/workout/68a08c42524cfb5164cf7168",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout",
+						"68a08c42524cfb5164cf7168"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar parcialmente workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"core\": \"abs\",\r\n    \"coreTwo\": \"legs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/workout/68a08c42524cfb5164cf7168",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout",
+						"68a08c42524cfb5164cf7168"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete workout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUxNzgwLCJleHAiOjE3NTUzNTUzODB9.sTbYD06QK3UNPPHiRMak-nI1JdNWgr5VpGhtqxjZwHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/workout/68a08c42524cfb5164cf7168",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"workout",
+						"68a08c42524cfb5164cf7168"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos go-workout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWY2YTU3M2U0YzVlYzBiNmVmNjg3ZCIsImVtYWlsIjoiYmllbHppbmhvZ2FtZXBsYXlAZ21haWwuY29tIiwiaWF0IjoxNzU1MzUzNzczLCJleHAiOjE3NTUzNTczNzN9.bDm0LO1LYgvzhHH5LR90lFiYQqjhJy75QxNyQeC5B-Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/go-workout",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"go-workout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://api-gymnotes.onrender.com",
+			"type": "default"
+		}
+	]
+}
