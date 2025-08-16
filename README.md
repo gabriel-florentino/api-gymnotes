@@ -1,6 +1,8 @@
 # Gym Notes API
 > API RESTful para gerenciamento de treinos, exercícios e autenticação de usuários. Desenvolvida com Node.js, Express e MongoDB. Conta com autenticação via JWT e Google OAuth, validações, proteção de rotas, documentação usando Swagger e deploy contínuo no Render.
 
+[Documentação](https://api-gymnotes.onrender.com/api-docs)
+
 ---
 
 ## Funcionalidades
